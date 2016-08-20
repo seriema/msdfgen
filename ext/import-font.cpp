@@ -3,12 +3,6 @@
 
 #include <cstdlib>
 #include <queue>
-#include <ft2build.h>
-#include FT_FREETYPE_H
-
-#ifdef _WIN32
-    #pragma comment(lib, "freetype.lib")
-#endif
 
 namespace msdfgen {
 
@@ -20,18 +14,6 @@ class FreetypeHandle {
     friend FontHandle * loadFont(FreetypeHandle *library, const char *filename);
 
     FT_Library library;
-
-};
-
-class FontHandle {
-    friend FontHandle * loadFont(FreetypeHandle *library, const char *filename);
-    friend void destroyFont(FontHandle *font);
-    friend bool getFontScale(double &output, FontHandle *font);
-    friend bool getFontWhitespaceWidth(double &spaceAdvance, double &tabAdvance, FontHandle *font);
-    friend bool loadGlyph(Shape &output, FontHandle *font, int unicode, double *advance);
-    friend bool getKerning(double &output, FontHandle *font, int unicode1, int unicode2);
-
-    FT_Face face;
 
 };
 
