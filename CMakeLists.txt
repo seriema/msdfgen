@@ -42,9 +42,9 @@ target_link_libraries(msdfgen
 )
 
 # We currently don't need the executable, only the lib.
-#add_executable(msdfgen-executable
-#	main.cpp
-#)
-#target_link_libraries(msdfgen-executable
-#	msdfgen
-#)
+add_executable(msdfgen-executable
+	main.cpp
+)
+target_link_libraries(msdfgen-executable
+	msdfgen
+)

@@ -13,3 +13,6 @@ shallow_clone: true
 build_script:
   - cmake .
   - msbuild .\ALL_BUILD.vcxproj /m
+
+test_script:
+  - example.bat
