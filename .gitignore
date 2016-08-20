@@ -9,6 +9,7 @@ Debug
 Release
 Win32
 msdfgen.dir
+*.png
 
 #
 # Created by https://www.gitignore.io/api/c++,cmake,jetbrains
